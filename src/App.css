@@ -1,38 +1,74 @@
-.App {
-  text-align: center;
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.max-width-container {
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 1280px;
+  padding-left: 0.625rem; /* 2.5/4 = 0.625 */
+  padding-right: 0.625rem; /* 2.5/4 = 0.625 */
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+@media (min-width: 768px) {
+  .max-width-container {
+    padding-left: 5rem; /* 20/4 = 5 */
+    padding-right: 5rem; /* 20/4 = 5 */
   }
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+/* button */
+.bl_home_nav_btn_cont {
   display: flex;
-  flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  gap: 10px;
+}
+.bl_home_login_btn {
+  display: flex;
+  align-items: center;
+  font-family: inherit;
+  cursor: pointer;
+  font-weight: 500;
+  font-size: 14px;
+  padding: 0.8em 1.3em 0.8em 0.9em;
+  color: #000;
+
+  border: none;
+  letter-spacing: 0.05em;
+  border-radius: 4px;
+}
+.bl_free_trail_btn {
+  display: flex;
+  align-items: center;
+  font-family: inherit;
+  cursor: pointer;
+  font-weight: 500;
+  font-size: 14px;
+  padding: 0.55em 1.3em 0.6em 0.9em;
   color: white;
+  background: #ad5389;
+  background: linear-gradient(to right, #02bdde, #02bdde, #02bdde);
+  border: none;
+  letter-spacing: 0.05em;
+  border-radius: 4px;
 }
 
-.App-link {
-  color: #61dafb;
+.bl_free_trail_btn svg {
+  margin-right: 3px;
+  transform: rotate(30deg);
+  transition: transform 0.5s cubic-bezier(0.76, 0, 0.24, 1);
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.bl_free_trail_btn span {
+  transition: transform 0.5s cubic-bezier(0.76, 0, 0.24, 1);
+}
+
+.bl_free_trail_btn:hover svg {
+  transform: translateX(5px) rotate(90deg);
+}
+
+.bl_free_trail_btn:hover span {
+  transform: translateX(7px);
 }
